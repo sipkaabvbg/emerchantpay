@@ -1,0 +1,15 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+
+version: '3.7'
+
+# Define services
+services:
+  # App backend service
+  merchant-server:
+    # Configuration for building the docker image for the backend service
+    build:
+      context: merchant-server # Use an image built from the specified dockerfile in the `merchant-server` directory.
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    restart: always
