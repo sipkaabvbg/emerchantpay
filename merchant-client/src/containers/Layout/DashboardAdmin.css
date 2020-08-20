@@ -1,0 +1,10 @@
+.login-form-button {
+    width: 100%;
+}
+
+.user-popup-wrapper {
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 34px;
+}

@@ -52,7 +52,20 @@ services:
     volumes:
       - db-data:/var/lib/mysql
     networks:
-      - backend     
+      - backend   
+    # Crontab
+  cron_p:
+    image: process_cron
+    depends_on: 
+      - merchantdb
+    build:
+      context: cron # Use an image built from the specified dockerfile in the `cron` directory.
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app/logs
+    entrypoint: sh /app/crontab.sh
+    networks:
+      - backend    
 # Volumes
 volumes:
   db-data:

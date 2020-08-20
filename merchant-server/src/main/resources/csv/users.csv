@@ -1,0 +1,15 @@
+username,password,name,description,email,status,total_transaction_sum, role
+adidas,adidas1,Adidas merchant,Adidas sells sporting goods,adidas@adidas.com,1,0,ROLE_MERCHANT
+reebok,reebok1,Reebok merchant,Reebok,reebok@reebok.com,1,0,ROLE_MERCHANT
+tom,tom1,Tom,System administrator,tom@merchant.com,1,0,ROLE_ADMIN
+marathons,marathons,Marathon Sports,Marathon Sports sells sporting goods,marathons@marathons.com,1,0,ROLE_MERCHANT
+marmot,marmot1,Marmot,Marathon sells sporting goods,marathon@marathon.com,1,0,ROLE_MERCHANT
+mssports,mssports1,MC Sports,MC Sports sells sporting goods,mssports@mssports.com,1,0,ROLE_MERCHANT
+midway,midway1,MidwayUSA,MidwayUSA sells sporting goods,midway@midway.com,1,0,ROLE_MERCHANT
+modell,modell1,Modell's Sporting Goods,Modell's Sporting Goods sells sporting goods,modell@modell.com,1,0,ROLE_MERCHANT
+modern,modern1,Modern Skate,Modern Skate sells sporting goods,modern@modern.com,1,0,ROLE_MERCHANT
+monkey,monkey1,MonkeySports,MonkeySports sells sporting goods,monkey@monkey.com,1,0,ROLE_MERCHANT
+moosejaw,moosejaw1,Moosejaw,Moosejaw sells sporting goods,moosejaw@moosejaw.com,1,0,ROLE_MERCHANT
+motorcycle,motorcycle1,Motorcycle Superstore,Motorcycle Superstore sells sporting goods,motorcycle@motorcycle.com,1,0,ROLE_MERCHANT
+mountain,mountain1,Mountain Gear,Mountain Gear sells sporting goods,mountain@mountain.com,1,0,ROLE_MERCHANT
+mount,mount1,Mount Gear,Mount Gear sells sporting goods,mount@mount.com,1,0,ROLE_MERCHANT

@@ -1,0 +1,29 @@
+<?xml version = "1.0"?>
+<project name = "Hello World Project" default = "info">
+   <target name = "info">
+     <tstamp>
+      <format property="current.time" pattern="MM/dd/yyyy hh:mm:ss aa" />
+       </tstamp>
+     <echo message="start cron job ${current.time}" />
+   	  <path id="build-classpath">
+        <fileset dir="/app">
+         <include name="mysql-connector-java-8.0.17.jar"/>
+        </fileset>
+      </path>
+      <pathconvert property="classpathProp" refid="build-classpath"/>
+
+	  <sql print="yes" output="temp.properties"
+          expandProperties="true" showheaders="false" showtrailers="false"
+	      driver="com.mysql.cj.jdbc.Driver"
+          url="jdbc:mysql://merchantdb:3306/merchant?allowPublicKeyRetrieval=true&amp;useSSL=false&amp;"
+          userid="merchant"
+          password="merchant">
+	     <classpath refid="build-classpath"/>
+	     <transaction>
+		 <![CDATA[
+           DELETE FROM transactions WHERE created_at < (NOW() - INTERVAL 1 HOUR );
+		    ]]>
+         </transaction>
+      </sql>
+   </target>
+</project>

@@ -10,9 +10,8 @@ COPY .mvn .mvn
 
 # Copy the pom.xml file
 COPY pom.xml .
-
-# Build all the dependencies in preparation to go offline. 
 RUN ./mvnw dependency:go-offline -B
+
 # Copy the project source
 COPY src src
 

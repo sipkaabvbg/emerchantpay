@@ -20,21 +20,26 @@ class AppHeader extends Component {
     }
 
     render() {
+        let {isAuthenticated} = this.props;
         let menuItems;
         
-        
+        if (!isAuthenticated) {
           menuItems = [
             <Menu.Item key="/login">
               <Link to="/login">Login</Link>
-            </Menu.Item>,
-            <Menu.Item key="/signup">
-              <Link to="/signup">Signup</Link>
-            </Menu.Item>                  
+            </Menu.Item>                 
           ];
+        } else {
+          menuItems = [
+            <Menu.Item key="/logout">
+              <span onClick={() => this.props.onLogout()}>Logout</span>
+            </Menu.Item>                 
+          ];
+        }
         
 
         return (
-            <Header className="app-header">
+          <Header className="app-header">
             <div className="container">
               <div className="app-title" >
                 <Link to="/">Merchant App</Link>
